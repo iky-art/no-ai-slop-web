@@ -1,0 +1,48 @@
+<!-- no-ai-slop-web:begin -->
+# no-ai-slop-web (v0.3.0)
+
+Aturan untuk membangun, mengaudit, dan memperbaiki UI website agar punya identitas sendiri, bukan templat AI generik.
+
+## Prinsip
+1. Kecocokan produk di atas tren.
+2. Fungsi nyata di atas dekorasi palsu: jangan karang testimoni, statistik, notifikasi, atau tombol mati.
+3. Ikuti konvensi proyek yang ada; jangan menulis ulang tanpa alasan.
+4. Bukti di atas klaim: jalankan lint, typecheck, build, dan test yang memang ada, lalu baca output aslinya.
+5. Aksesibilitas adalah baseline: fokus terlihat, kontras, nama aksesibel, dukung reduced motion.
+6. Responsif: tidak ada overflow horizontal di lebar 320, 375, 768, 1024, dan 1440 px.
+7. Jujur soal tool yang tidak tersedia.
+
+## Alur kerja
+inspect, plan, implement, verify, report.
+
+## Status bukti
+PASS, FAIL, BLOCKED, NOT RUN, atau PARTIAL. Jangan pernah menandai BLOCKED atau NOT RUN sebagai PASS.
+
+## Batas aman
+Minta izin sebelum: menghapus data atau file besar, menulis ulang history Git, mengubah secret/auth/produksi, deploy atau publish, dan memakai layanan berbayar.
+
+## Perintah
+Jika agen mendukung skill, pakai skill dengan nama yang sama. Jika tidak, panggil lewat nama, misalnya "jalankan slop-audit pada src/".
+
+| Perintah | Fungsi |
+|---|---|
+| `/slop-a11y` | Audit aksesibilitas terfokus (kontras, fokus, label, heading, keyboard) dengan pemisahan jelas antara cek kode dan uji nyata |
+| `/slop-audit` | Audit UI yang sudah ada terhadap pola AI-slop dan beri skor + daftar perbaikan berurutan prioritas (read-only) |
+| `/slop-build` | Bangun halaman/fitur UI dari awal sampai verifikasi, dengan alur inspect → plan → implement → verify → report |
+| `/slop-compare` | Bandingkan skor AI-slop sebelum dan sesudah perubahan beserta daftar yang berubah (read-only) |
+| `/slop-copy` | Tulis ulang copy generik menjadi bahasa Indonesia yang natural, spesifik, dan jujur |
+| `/slop-design` | Tentukan arah desain khusus produk (tipografi, warna, permukaan, motion) dan tulis ke DESIGN.md |
+| `/slop-fake` | Pindai konten dan fungsi palsu (testimoni, statistik, notifikasi live, lorem ipsum, tombol mati) — read-only |
+| `/slop-fix` | Perbaiki temuan audit AI-slop secara bertahap dengan perubahan minimal dan verifikasi |
+| `/slop-hero` | Evaluasi dan bangun hero/intro bermotion yang cocok dengan produk (adaptif, bukan paksaan) |
+| `/slop-mobile` | Rapikan pengalaman mobile — tap highlight, dock bawah, safe-area, target sentuh, overflow |
+| `/slop-plan` | Buat rencana + acceptance criteria + arah desain sebelum membangun UI (tanpa mengubah kode) |
+| `/slop-redesign` | Ganti konsep visual dan hierarki UI yang terasa generik (skor slop tinggi), bukan sekadar mengganti warna |
+| `/slop-ship` | Checklist sebelum publish (tautan, meta, favicon, 404, placeholder, build). Tidak pernah deploy tanpa izin |
+| `/slop-states` | Lengkapi state UI yang sering terlewat (loading, empty, error, success, disabled) pada komponen yang membutuhkannya |
+| `/slop-theme` | Tambah tema Otomatis/Terang/Gelap berbasis token dengan pilihan yang tersimpan |
+| `/slop-tokens` | Kumpulkan nilai hardcode (warna, spasi, radius, bayangan) menjadi token desain yang konsisten |
+| `/slop-verify` | Verifikasi perubahan UI dengan tool yang tersedia dan laporkan PASS/FAIL/BLOCKED/NOT RUN secara jujur |
+
+Skill lengkap dan checklist ada di `skills/no-ai-slop-web/` bila tersedia.
+<!-- no-ai-slop-web:end -->
