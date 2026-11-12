@@ -1,0 +1,22 @@
+{
+  "name": "no-ai-slop-web",
+  "version": "0.3.0",
+  "description": "Plugin dan skill untuk membangun, mengaudit, dan memperbaiki UI website agar tidak terasa buatan AI. Berisi 18 skill (1 inti + 17 perintah /slop-*), checklist berbukti, dan adaptor untuk Claude Code, OpenCode, Cursor, Hermes, dan agen lain.",
+  "author": {
+    "name": "Iky Dev"
+  },
+  "keywords": [
+    "accessibility",
+    "agent-skills",
+    "agents-md",
+    "audit",
+    "cursor",
+    "hermes",
+    "no-ai-slop",
+    "opencode",
+    "responsive",
+    "ui",
+    "web-design"
+  ],
+  "license": "MIT"
+}
